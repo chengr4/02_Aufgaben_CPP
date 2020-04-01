@@ -1,3 +1,3 @@
-# C++ based module
+# 02_Aufgaben_CPP
 
-C++ VScode 用基本模組
+第六學期作業
