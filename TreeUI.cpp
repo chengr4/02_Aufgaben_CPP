@@ -10,18 +10,27 @@
 #include <string>
 using namespace std;
 
+
 #include "Node.h"
 
+int main() {
+  Node *nodeRoot = new Node("root");
+  Node *nodeA = new Node("left");
+  Node *nodeB = new Node("right");
 
 
-
-int main()
-{
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-
-    for (const string& word : msg)
-    {
-        cout << word << " ";
+  try {    
+    nodeRoot->addChild(nodeA);
+    nodeRoot->addChild(nodeB);
+  } catch (const char* error) {
+        cout << error << endl;
     }
-    cout << endl;
+  
+
+
+  nodeRoot->getNrOfChildren();
+  cout << nodeRoot->getChild(2) << endl;
+
+  delete nodeRoot;
+  
 }
