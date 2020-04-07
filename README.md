@@ -2,7 +2,13 @@
 
 第六學期作業
 
+!!! teil1 and teil2 should be used seperatedly
+
+only do binary tree
+
 ## question
 
 1. 不明白 constructor 用 call by reference 的意義
 2. debug step over 停留原地 with ~Node()
+3. debug modus???可能會錯意
+4. private static variable called by static function
