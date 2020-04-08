@@ -1,8 +1,8 @@
 /**
  @file Node.h
  @author Feng-Shih Cheng 
- @date 0.0.0
- @brief 
+ @date 08.04.2020
+ @brief Node.h
 */
 
 #ifndef _NODE_H_
@@ -23,9 +23,17 @@ class Node {
   Node* left_node; 
   Node* right_node;
 
-  static vector<Node*> children;
+  
+
+  
+  static int nodeID;
 
   public:
+
+  static vector<Node*> children;
+  // fuer Rekursive Baumerstellung
+  vector<Node*> child_nodes;
+  
   // Deklaration der Konstruktoren
   Node();
   // Um welche Art Parameterübergabe handelt es sich hier? -> call by reference
@@ -50,9 +58,14 @@ class Node {
   
   void addChild(Node* child);
 
+  
 
-
+//  vector<Node*> getNodeVector();
 
 }; // Semicolon!!!!!
+
+void print(ostream& str, Node* n);
+
+void createCompleteTree(int nrChildNodes,int treeDepth);
 
 #endif

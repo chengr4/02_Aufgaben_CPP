@@ -1,29 +1,37 @@
 /**
  @file Node.cpp
  @author Feng-Shih Cheng 
- @date 
- @brief 
+ @date 08.04.2020
+ @brief Node.cpp
 */
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Node.h"
 using namespace std;
 
 
 // initial static attribute
 vector<Node*> Node::children(0);
+int Node::nodeID = 0;
 
 // constructor
 Node::Node(const string& n): name(n) {
+  child_nodes.resize(0);
   left_node =0L; 
   right_node =0L;
   DEBUG(n);
+  nodeID++;
+  
 }
 
 Node::Node() {
+  child_nodes.resize(0);
   left_node =0L; 
   right_node =0L;
+  nodeID++;
+  name = "node_" + to_string(nodeID);
 }
 
 // destructor
@@ -44,6 +52,7 @@ string Node::getName() const {
 
 void Node::setName(string s) {
   name = s;
+  DEBUG(s);
 }
 
 void Node::getNrOfChildren() const {
