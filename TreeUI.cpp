@@ -94,7 +94,7 @@ void createCompleteTree(int nrChildNodes,int treeDepth) {
 int main() {
   
   // teil1
-  /*
+  
   Node *nodeRoot = new Node();
   Node *nodeA = new Node("left");
   Node *nodeB = new Node("right");
@@ -113,14 +113,14 @@ int main() {
   cout << nodeRoot->getChild(2) << endl;
 
   delete nodeRoot;
-  */
+  
 
  // teil2
- try {    
+ /*try {    
     createCompleteTree(3,Global_treeDepth);
     //print(cout, tree);
   } catch (const char* error) {
     cout << error << endl;
   }
 
-}
+}*/
